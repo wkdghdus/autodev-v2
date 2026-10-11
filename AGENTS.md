@@ -1,96 +1,177 @@
 # AutoDev v2 Agent Guide
 
-AutoDev v2 is developed using bounded, retrieval-first context.
+AutoDev v2 uses bounded, retrieval-first context.
 
 ## Core rule
 
-Context is fetched, not inherited.
+**Context is fetched, not inherited.**
 
-Do not read the whole repository, all documentation, or the previous AutoDev repository before starting work.
+Do not begin a task by reading the entire repository, all milestones,
+historical specifications, or the previous AutoDev repository.
 
-Start from the selected milestone and retrieve additional information only when a concrete unanswered question requires it.
+Start from the current milestone and retrieve additional context only
+to answer a concrete unresolved question.
 
-## Normal task context
+## Milestone routing
 
-For implementation work, read:
+`ROADMAP.yaml` is the authoritative milestone index.
+
+It tells you:
+
+- which milestones exist;
+- their intended sequence;
+- dependencies;
+- file locations;
+- current execution status.
+
+`ROADMAP.yaml` is navigation metadata, not implementation requirements.
+
+The selected `milestones/<ID>.md` file is the implementation contract
+for that milestone.
+
+Do not open unrelated milestone files merely because they exist.
+
+## Default planning context
+
+For a milestone planning session, begin with only:
 
 1. `AGENTS.md`
-2. the selected `milestones/<ID>.md`
-3. `context/SHARED-INVARIANTS.md`
-4. the approved plan, if one exists
-5. source and tests directly relevant to the task
+2. `ROADMAP.yaml`
+3. the selected `milestones/<ID>.md`
+4. `context/SHARED-INVARIANTS.md`
 
-Do not automatically read unrelated milestones, historical design documents, verification reports, or the old AutoDev repository.
+Then inspect directly relevant current source/tests.
 
-## Planning
+Read `PRODUCT.md` only when the milestone leaves a product-boundary
+question unresolved.
 
-Use one `ralplan` for a milestone.
+Read predecessor verification only when the current milestone needs
+evidence about what the predecessor actually delivered.
 
-The plan must identify:
+## Legacy references
 
-- objective
-- scope
-- exclusions
-- affected components
-- implementation slices
-- acceptance criteria
-- verification commands
+The previous AutoDev repository is reference material, not inherited
+architecture.
 
-Do not redesign requirements that are already explicit.
+Use these routers first:
 
-## Execution
+- `migration/OLD-REPO.md`
+- `migration/SOURCES.md`
+- `migration/REFERENCE-MAP.md`
 
-Execute an approved plan with Ralph in bounded slices.
+If the current milestone mentions an `Fxx` fault, `Gxx` gate, historical
+contract, or incident, use the reference map to locate that exact source.
 
-Prefer:
-
-inspect → edit → run → observe → fix → verify
-
-A new slice should reuse the approved milestone plan rather than starting another broad planning exercise.
+Do not broadly read the old specification or old roadmap.
 
 ## Context expansion
 
-If required information is missing:
+When information is missing:
 
 1. state the exact unresolved question;
 2. identify the smallest authoritative source likely to answer it;
-3. read only that source or section;
+3. read only the relevant source or section;
 4. continue.
 
-Broad documentation discovery is a fallback, not a starting step.
+Do not expand context merely to "understand everything."
 
-## Old AutoDev repository
+## Planning
 
-The previous repository is historical/reference material.
+Use one `ralplan` for one milestone.
 
-Do not inspect it broadly.
+The plan must identify:
 
-Use `migration/OLD-REPO.md` first.
+- objective;
+- scope;
+- exclusions;
+- affected components;
+- relevant existing implementation;
+- acceptance criteria;
+- verification commands;
+- bounded Ralph implementation slices.
 
-Open old files only when that migration map identifies them as relevant to the current task.
+Do not redesign explicit requirements.
 
-Old architecture and code are candidates for reuse, not automatic requirements.
+Do not start a new broad planning cycle for every Ralph slice.
+
+## Execution
+
+Execute the approved plan in bounded Ralph slices.
+
+Prefer:
+
+inspect -> edit -> run -> observe -> fix -> verify
+
+Each slice should use:
+
+- the selected milestone;
+- its approved plan;
+- the current slice;
+- directly relevant source/tests;
+- targeted additional context only when required.
+
+Do not implement future milestones opportunistically.
+
+## Verification
+
+Executor self-report is not completion evidence.
+
+Completion requires reproducible evidence against the milestone's
+acceptance criteria.
+
+After implementation, write:
+
+`docs/verification/<ID>.md`
+
+Include:
+
+- changed files;
+- commands and exit codes;
+- criterion-by-criterion evidence;
+- relevant effect/safety audit;
+- known limitations;
+- blocked live validation where applicable.
+
+A milestone must not be marked complete before verification exists.
+
+## Roadmap advancement
+
+Only one milestone should normally be active.
+
+Statuses in `ROADMAP.yaml` are explicit state, not automatically inferred
+from dependencies.
+
+After a milestone is independently verified:
+
+1. mark it `complete`;
+2. mark the next intended milestone `ready`;
+3. keep later milestones `blocked`.
+
+If multiple milestones are technically dependency-ready, follow roadmap
+sequence unless the operator explicitly selects another one.
 
 ## Engineering rules
 
-- Work on one bounded objective at a time.
 - Prefer the smallest correct implementation.
-- Never invent approval or authority.
+- Never invent product direction.
+- Never invent authority or approval.
 - Never weaken acceptance criteria.
 - Preserve fail-closed behavior.
-- Do not implement future milestones opportunistically.
-- Tests and observable behavior outweigh agent self-report.
-- Prefer executable verification over additional prose.
+- Missing evidence remains missing.
+- Simulated evidence is never live evidence.
+- Current execution state belongs in deterministic records.
+- Tests and observed behavior outrank agent narration.
 
-## Repository navigation
+## Repository map
 
-- `PRODUCT.md` — product direction and V0 boundary
-- `context/` — small stable shared context
-- `milestones/` — bounded work contracts
+- `PRODUCT.md` — product direction
+- `ROADMAP.yaml` — milestone navigation and state
+- `milestones/` — bounded milestone contracts
+- `context/` — stable shared context
 - `docs/plans/` — approved implementation plans
 - `docs/verification/` — completion evidence
-- `migration/` — maps to legacy material
+- `migration/` — legacy lookup/reference maps
 - `src/` — implementation
 - `tests/` — executable verification
 
-Keep this file short. It is a router, not a specification.
+This file is a signpost, not a project encyclopedia.

@@ -1,0 +1,212 @@
+schema_version: 1
+project: autodev-v2
+
+execution:
+  max_active_milestones: 1
+  selection_policy: lowest_sequence_ready
+  status_is_explicit: true
+
+status_values:
+  - blocked
+  - ready
+  - active
+  - verifying
+  - complete
+
+milestones:
+  - id: AD-00
+    sequence: 0
+    title: "Baseline, scope lock, and evidence inventory"
+    path: milestones/AD-00.md
+    depends_on: []
+    status: ready
+
+  - id: AD-01
+    sequence: 1
+    title: "Schemas, identities, authority, and orthogonal states"
+    path: milestones/AD-01.md
+    depends_on: [AD-00]
+    status: blocked
+
+  - id: AD-02
+    sequence: 2
+    title: "Safe storage, command execution, locks, and journals"
+    path: milestones/AD-02.md
+    depends_on: [AD-01]
+    status: blocked
+
+  - id: AD-03
+    sequence: 3
+    title: "Friendly init and conservative artifact discovery"
+    path: milestones/AD-03.md
+    depends_on: [AD-01, AD-02]
+    status: blocked
+
+  - id: AD-04
+    sequence: 4
+    title: "Execution-index compiler and approval binding"
+    path: milestones/AD-04.md
+    depends_on: [AD-03]
+    status: blocked
+
+  - id: AD-05
+    sequence: 5
+    title: "Native capability and runtime compatibility adapters"
+    path: milestones/AD-05.md
+    depends_on: [AD-02]
+    status: blocked
+
+  - id: AD-06
+    sequence: 6
+    title: "Credential metadata and effective billing-route audit"
+    path: milestones/AD-06.md
+    depends_on: [AD-01, AD-02, AD-05]
+    status: blocked
+
+  - id: AD-07
+    sequence: 7
+    title: "Resource admission and shared-account budgets"
+    path: milestones/AD-07.md
+    depends_on: [AD-06]
+    status: blocked
+
+  - id: AD-08
+    sequence: 8
+    title: "Hermes profile, skill installation, and deterministic environments"
+    path: milestones/AD-08.md
+    depends_on: [AD-03, AD-05, AD-06]
+    status: blocked
+
+  - id: AD-09
+    sequence: 9
+    title: "MCP configuration and actual-tool-access probe"
+    path: milestones/AD-09.md
+    depends_on: [AD-05, AD-08]
+    status: blocked
+
+  - id: AD-10
+    sequence: 10
+    title: "Managed-worktree and broker lifecycle probes"
+    path: milestones/AD-10.md
+    depends_on: [AD-05, AD-09]
+    status: blocked
+
+  - id: AD-11
+    sequence: 11
+    title: "Multi-source execution reconciliation"
+    path: milestones/AD-11.md
+    depends_on: [AD-04, AD-05, AD-10]
+    status: blocked
+
+  - id: AD-12
+    sequence: 12
+    title: "Guarded dispatch, idempotency, and fencing"
+    path: milestones/AD-12.md
+    depends_on: [AD-02, AD-07, AD-11]
+    status: blocked
+
+  - id: AD-13
+    sequence: 13
+    title: "Generic supervisor and bounded cycle"
+    path: milestones/AD-13.md
+    depends_on: [AD-04, AD-11, AD-12]
+    status: blocked
+
+  - id: AD-14
+    sequence: 14
+    title: "Independent verification and revision applicability"
+    path: milestones/AD-14.md
+    depends_on: [AD-04, AD-11, AD-13]
+    status: blocked
+
+  - id: AD-15
+    sequence: 15
+    title: "Doctor, active validation ladder, and admission receipts"
+    path: milestones/AD-15.md
+    depends_on:
+      - AD-06
+      - AD-07
+      - AD-08
+      - AD-09
+      - AD-10
+      - AD-11
+      - AD-12
+      - AD-13
+      - AD-14
+    status: blocked
+
+  - id: AD-16
+    sequence: 16
+    title: "Idempotent onboarding and reviewed remediation"
+    path: milestones/AD-16.md
+    depends_on: [AD-03, AD-08, AD-09, AD-10, AD-15]
+    status: blocked
+
+  - id: AD-17
+    sequence: 17
+    title: "Actual gateway environment and delivery proof"
+    path: milestones/AD-17.md
+    depends_on: [AD-08, AD-15, AD-16]
+    status: blocked
+
+  - id: AD-18
+    sequence: 18
+    title: "Paused canary, guarded cron, and explicit enablement"
+    path: milestones/AD-18.md
+    depends_on: [AD-07, AD-12, AD-15, AD-17]
+    status: blocked
+
+  - id: AD-19
+    sequence: 19
+    title: "Disable, restart reconciliation, and safe recovery"
+    path: milestones/AD-19.md
+    depends_on: [AD-11, AD-12, AD-16, AD-18]
+    status: blocked
+
+  - id: AD-20
+    sequence: 20
+    title: "Adversarial acceptance and enforcement audit"
+    path: milestones/AD-20.md
+    depends_on:
+      - AD-00
+      - AD-01
+      - AD-02
+      - AD-03
+      - AD-04
+      - AD-05
+      - AD-06
+      - AD-07
+      - AD-08
+      - AD-09
+      - AD-10
+      - AD-11
+      - AD-12
+      - AD-13
+      - AD-14
+      - AD-15
+      - AD-16
+      - AD-17
+      - AD-18
+      - AD-19
+    status: blocked
+
+  - id: AD-21
+    sequence: 21
+    title: "Nous shadow parity and controlled migration plan"
+    path: milestones/AD-21.md
+    depends_on: [AD-20]
+    status: blocked
+
+  - id: AD-22
+    sequence: 22
+    title: "Independent second-project pilot"
+    path: milestones/AD-22.md
+    depends_on: [AD-20, AD-21]
+    status: blocked
+
+  - id: AD-23
+    sequence: 23
+    title: "Release, operator runbooks, and evidence freeze"
+    path: milestones/AD-23.md
+    depends_on: [AD-22]
+    status: blocked
