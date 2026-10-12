@@ -1,0 +1,26 @@
+schema_version: 2
+setup_state: draft
+project:
+  id: 11111111-1111-1111-1111-111111111111
+  slug: autodev-v2
+  name: AutoDev v2
+sources:
+  requirements: []
+  context: []
+  discovery:
+    roots: []
+  execution_index: .agent/EXECUTION.yaml
+execution:
+  harness: gajae
+  workflow: approved_roadmap_only
+  base_policy: dependencies_integrated
+  target_ref: null
+  max_active_milestones: 1
+  max_primary_actions_per_cycle: 1
+verification:
+  commands: []
+  acceptance_sources: []
+  require_independent_review: true
+authority:
+  requested:
+    write-fixture: human
