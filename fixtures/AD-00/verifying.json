@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "fixture_id": "verifying",
+  "label": "verifying",
+  "synthetic": true,
+  "live_trace": false,
+  "explanation": "Illustrative future work item whose result awaits independent evidence.",
+  "status_claim": "synthetic example only"
+}
