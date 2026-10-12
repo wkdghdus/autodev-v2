@@ -1,0 +1,9 @@
+[project]
+name = "autodev"
+version = "0.0.0"
+description = "Offline AutoDev v2 scaffold and evidence inventory."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+autodev = "autodev.cli:main"
