@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "fixture_id": "uncertain",
+  "label": "uncertain",
+  "synthetic": true,
+  "live_trace": false,
+  "explanation": "Illustrative future work item that must fail closed until ambiguity is reconciled.",
+  "status_claim": "synthetic example only"
+}
