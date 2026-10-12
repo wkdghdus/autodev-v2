@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "fixtures": [
+    {
+      "id": "ready",
+      "path": "fixtures/AD-00/ready.json",
+      "measured_sha256": "f00ddf1eebff411f9ed5de2d7e88c1a928aeb1d5fac571387f2d186ed2ab87c7",
+      "provenance": "generated AD-00 synthetic example fixture",
+      "synthetic": true,
+      "live_trace": false
+    },
+    {
+      "id": "active",
+      "path": "fixtures/AD-00/active.json",
+      "measured_sha256": "9f88b49ec6f10cdec7ce217bf28408335d26c749d6280856e7b8067acc89445f",
+      "provenance": "generated AD-00 synthetic example fixture",
+      "synthetic": true,
+      "live_trace": false
+    },
+    {
+      "id": "uncertain",
+      "path": "fixtures/AD-00/uncertain.json",
+      "measured_sha256": "7cccbbaeff42f057eaf860e14cd2b6755954be185a7dea4ac359cf38e6b9f127",
+      "provenance": "generated AD-00 synthetic example fixture",
+      "synthetic": true,
+      "live_trace": false
+    },
+    {
+      "id": "verifying",
+      "path": "fixtures/AD-00/verifying.json",
+      "measured_sha256": "842330863a26d69d8e83a9205312ef11c66894c22b0e000d523fdf55e67db491",
+      "provenance": "generated AD-00 synthetic example fixture",
+      "synthetic": true,
+      "live_trace": false
+    },
+    {
+      "id": "human-blocked",
+      "path": "fixtures/AD-00/human-blocked.json",
+      "measured_sha256": "1fc32a0cbdc035f95390bd5e325c302927c163227e1a212e937607cf1b9ede38",
+      "provenance": "generated AD-00 synthetic example fixture",
+      "synthetic": true,
+      "live_trace": false
+    },
+    {
+      "id": "completed",
+      "path": "fixtures/AD-00/completed.json",
+      "measured_sha256": "ba8f4e1e678cc38bd3c4c94e68ee5e10f523ecb58f9cbc0b572359c7dbecd307",
+      "provenance": "generated AD-00 synthetic example fixture",
+      "synthetic": true,
+      "live_trace": false
+    }
+  ]
+}
