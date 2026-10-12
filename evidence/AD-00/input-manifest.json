@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "AGENTS",
+      "path": "AGENTS.md",
+      "availability": "AVAILABLE",
+      "measured_sha256": "b43a8ffd3479993100df717417b652238bd5d1562c2763bcfcf63ffc99149050",
+      "role": "workspace execution authority",
+      "provenance": "repository agent instruction file consumed for AD-00 execution constraints",
+      "hash_scope": "execution input before final roadmap advancement",
+      "observations": [
+        "Execution must remain bounded, verified, and retrieval-first."
+      ],
+      "proposed_requirements": [],
+      "live_verified": false
+    },
+    {
+      "id": "AD00_PLAN",
+      "path": "docs/plans/AD-00.md",
+      "availability": "AVAILABLE",
+      "measured_sha256": "797d42b82ddd898c3c92d8f3dbe5654cc099c9cfa02d969a90f3ca704c4a857b",
+      "role": "approved implementation plan",
+      "provenance": "user-provided AD-00 plan file in repository workspace",
+      "hash_scope": "execution input before final roadmap advancement",
+      "observations": [
+        "Plan is consensus-approved for implementation and excludes live probes."
+      ],
+      "proposed_requirements": [
+        "Implement only AD-00 scaffold, evidence records, baseline, fixtures, and safety tests."
+      ],
+      "live_verified": false
+    },
+    {
+      "id": "AD00_MILESTONE",
+      "path": "milestones/AD-00.md",
+      "availability": "AVAILABLE",
+      "measured_sha256": "a65c3aa326a0aa67196584d1ad956804fca245403ac76d4de5cb2bba9b5c7df5",
+      "role": "canonical milestone contract",
+      "provenance": "repository milestone file",
+      "hash_scope": "execution input before final roadmap advancement",
+      "observations": [
+        "AD-00 depends on no earlier milestone."
+      ],
+      "proposed_requirements": [
+        "Satisfy AD-00-AC1 through AD-00-AC5."
+      ],
+      "live_verified": false
+    },
+    {
+      "id": "SHARED_INVARIANTS",
+      "path": "context/SHARED-INVARIANTS.md",
+      "availability": "AVAILABLE",
+      "measured_sha256": "b65e7a906512b7b224303a7628e64e77cb169694ca2d153219044f587e3e5ff6",
+      "role": "shared safety and verification constraints",
+      "provenance": "repository shared context file",
+      "hash_scope": "execution input before final roadmap advancement",
+      "observations": [
+        "Unknown authority does not imply permission; missing evidence remains missing."
+      ],
+      "proposed_requirements": [],
+      "live_verified": false
+    },
+    {
+      "id": "LEGACY_SOURCES",
+      "path": "migration/SOURCES.md",
+      "availability": "AVAILABLE",
+      "measured_sha256": "83671f61a0bc8820a8a9900e504229f8290be51514ffcf5b16b9da92bd9b1cb8",
+      "role": "S1-S3 metadata authority",
+      "provenance": "repository migration source router",
+      "hash_scope": "execution input before final roadmap advancement",
+      "observations": [
+        "S1-S3 report bodies are unavailable; recorded SHA-256 values are historical identity metadata."
+      ],
+      "proposed_requirements": [],
+      "live_verified": false
+    },
+    {
+      "id": "LEGACY_OLD_REPO_ROUTER",
+      "path": "migration/OLD-REPO.md",
+      "availability": "AVAILABLE",
+      "measured_sha256": "4926070d56929ad8daeccbacdf79e2612a92923f32c3ed146354d84ca3c60f3d",
+      "role": "legacy repository access router",
+      "provenance": "repository migration router consulted to avoid broad historical reads",
+      "hash_scope": "execution input before final roadmap advancement",
+      "observations": [
+        "Legacy material is reference material, not inherited architecture."
+      ],
+      "proposed_requirements": [],
+      "live_verified": false
+    },
+    {
+      "id": "LEGACY_REFERENCE_MAP",
+      "path": "migration/REFERENCE-MAP.md",
+      "availability": "AVAILABLE",
+      "measured_sha256": "39b9d8c693896ef20cd3d14124b20cdd699ca5149d51bad5fa11b94d9457f01e",
+      "role": "targeted legacy reference map",
+      "provenance": "repository migration map used for the AD-00 F63 reference during planning",
+      "hash_scope": "execution input before final roadmap advancement",
+      "observations": [
+        "F63 lookup was targeted; broad legacy specifications were not loaded for implementation."
+      ],
+      "proposed_requirements": [],
+      "live_verified": false
+    },
+    {
+      "id": "ROADMAP",
+      "path": "ROADMAP.yaml",
+      "availability": "AVAILABLE",
+      "measured_sha256": "1519044fe54185b2ad259e06746c76fda3dcc971773eec5bd27d925a1c037ff6",
+      "role": "milestone status authority",
+      "provenance": "repository roadmap after independent AD-00 verification and advancement; startup identity preserved separately",
+      "hash_scope": "current bytes after AD-00 completion gate",
+      "observations": [
+        "AD-00 was ready and later milestones were blocked at implementation start.",
+        "AD-00 is complete, AD-01 ready, and all later milestones blocked after independent verification.",
+        "AD-01 is complete, AD-02 is ready, and later milestones remain blocked after independent AD-01 verification."
+      ],
+      "proposed_requirements": [
+        "Advance roadmap only after independent verification exists."
+      ],
+      "live_verified": false,
+      "startup_measured_sha256": "39d53ce9d02a68d8e7fec56367c4a8e159638f0932e07b2e6b0a07f1ac878ac6"
+    }
+  ]
+}
