@@ -19,21 +19,21 @@ milestones:
     title: "Baseline, scope lock, and evidence inventory"
     path: milestones/AD-00.md
     depends_on: []
-    status: ready
+    status: complete
 
   - id: AD-01
     sequence: 1
     title: "Schemas, identities, authority, and orthogonal states"
     path: milestones/AD-01.md
     depends_on: [AD-00]
-    status: blocked
+    status: complete
 
   - id: AD-02
     sequence: 2
     title: "Safe storage, command execution, locks, and journals"
     path: milestones/AD-02.md
     depends_on: [AD-01]
-    status: blocked
+    status: ready
 
   - id: AD-03
     sequence: 3
