@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "legacy_repository": "wkdghdus/autodev",
+  "legacy_revision": "b25242b302999f124cb5575ce7d49f3a20dc189d",
+  "records": [
+    {
+      "id": "S1",
+      "title": "Lessons Learned from Nous Autonomous Supervisor Setup.",
+      "recorded_filename": "Pasted markdown(2).md",
+      "recorded_sha256": "6ace331bbf3f2ee7af23b46f8cbd579290c434e0f3d913a0e0eccc2d035b928d",
+      "measured_sha256": null,
+      "evidence_class": "PROVIDED_FILE",
+      "body_status": "UNAVAILABLE",
+      "live_verified": false,
+      "observations": [],
+      "proposed_requirements": [],
+      "unavailable_extraction": null
+    },
+    {
+      "id": "S2",
+      "title": "Hermes + Gajae Automated Onboarding: Lessons from Nous.",
+      "recorded_filename": "Pasted markdown (2).md",
+      "recorded_sha256": "d0ea218d74b658f174bd8566c8bf017981b06d7df51a12df4ecb94e997bf052b",
+      "measured_sha256": null,
+      "evidence_class": "PROVIDED_FILE",
+      "body_status": "UNAVAILABLE",
+      "live_verified": false,
+      "observations": [],
+      "proposed_requirements": [],
+      "unavailable_extraction": null
+    },
+    {
+      "id": "S3",
+      "title": "Lessons Learned From Nous Autonomous Onboarding.",
+      "recorded_filename": "Pasted markdown (3).md",
+      "recorded_sha256": "bdac1bb84c3de3f695462d371ee3509e9a98007f9091b2292ad6f83eb2dd43b5",
+      "measured_sha256": null,
+      "evidence_class": "PROVIDED_FILE",
+      "body_status": "UNAVAILABLE",
+      "live_verified": false,
+      "historical_identity_note": "The source was recorded as beginning with an introductory paragraph before its main heading.",
+      "observations": [],
+      "proposed_requirements": [],
+      "unavailable_extraction": null
+    }
+  ]
+}
