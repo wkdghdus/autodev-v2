@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "fixture_id": "ready",
+  "label": "READY",
+  "synthetic": true,
+  "live_trace": false,
+  "explanation": "Illustrative future work item that has enough reviewed evidence to be considered ready in a later milestone.",
+  "status_claim": "synthetic example only"
+}
