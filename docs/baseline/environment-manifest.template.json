@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "scope": "AD-00 template only",
+  "generated_values": false,
+  "machine": {
+    "project_identity": "UNKNOWN",
+    "repository_revision": "UNKNOWN",
+    "worktree_authority": "UNKNOWN",
+    "project_authority_artifacts": "UNKNOWN",
+    "os": null,
+    "architecture": null,
+    "python": null,
+    "paths": "UNKNOWN",
+    "profile": "UNKNOWN",
+    "install_identity": "UNKNOWN",
+    "environment_identity": "UNKNOWN",
+    "hermes_cli": "UNKNOWN",
+    "gjc_cli": "UNKNOWN",
+    "native_cli_compatibility": "UNKNOWN"
+  },
+  "credentials": {
+    "metadata_available": "UNKNOWN",
+    "secret_values_included": false,
+    "effective_auth_route": "UNKNOWN",
+    "provider_route": "UNKNOWN",
+    "account_route": "UNKNOWN",
+    "billing_or_budget": "UNKNOWN",
+    "resource_limits": "UNKNOWN",
+    "shared_budget": "UNKNOWN"
+  },
+  "lifecycle": {
+    "mcp_configuration": "UNKNOWN",
+    "mcp_discovered_access": "UNKNOWN",
+    "mcp_actual_access": "UNKNOWN",
+    "broker_session_state": "UNKNOWN",
+    "worktree_owner": "UNKNOWN",
+    "journal_or_reconciliation_state": "UNKNOWN",
+    "revision_applicability": "UNKNOWN",
+    "cron_or_gateway_state": "UNKNOWN",
+    "scheduling_admission": "UNKNOWN",
+    "delivery_state": "UNKNOWN",
+    "restart_disable_behavior": "UNKNOWN",
+    "nous_compatibility": "UNKNOWN"
+  },
+  "execution_traces": {
+    "ready_real_trace": "UNKNOWN",
+    "active_real_trace": "UNKNOWN",
+    "uncertain_real_trace": "UNKNOWN",
+    "verifying_real_trace": "UNKNOWN",
+    "human_blocked_real_trace": "UNKNOWN",
+    "completed_real_trace": "UNKNOWN",
+    "synthetic_fixture_source": "fixtures/AD-00"
+  },
+  "provenance": {
+    "authority_required": "later approved sanitized metadata/probe scope",
+    "live_verified": false
+  }
+}
