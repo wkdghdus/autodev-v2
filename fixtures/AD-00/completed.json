@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "fixture_id": "completed",
+  "label": "completed",
+  "synthetic": true,
+  "live_trace": false,
+  "explanation": "Illustrative future work item with reproducible verification evidence.",
+  "status_claim": "synthetic example only"
+}
