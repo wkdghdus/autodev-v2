@@ -77,7 +77,7 @@ Do not expand context merely to "understand everything."
 
 ## Planning
 
-Use one `ralplan` for one milestone.
+Use one implementation plan for one milestone.
 
 The plan must identify:
 
@@ -88,15 +88,15 @@ The plan must identify:
 - relevant existing implementation;
 - acceptance criteria;
 - verification commands;
-- bounded Ralph implementation slices.
+- bounded implementation slices.
 
 Do not redesign explicit requirements.
 
-Do not start a new broad planning cycle for every Ralph slice.
+Do not start a new broad planning cycle for every implementation slice.
 
 ## Execution
 
-Execute the approved plan in bounded Ralph slices.
+Execute the approved plan in bounded implementation slices.
 
 Prefer:
 
