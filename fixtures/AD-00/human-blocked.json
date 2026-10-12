@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "fixture_id": "human-blocked",
+  "label": "human-blocked",
+  "synthetic": true,
+  "live_trace": false,
+  "explanation": "Illustrative future work item blocked on explicit human authority.",
+  "status_claim": "synthetic example only"
+}
