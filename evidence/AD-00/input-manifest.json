@@ -5,12 +5,14 @@
       "id": "AGENTS",
       "path": "AGENTS.md",
       "availability": "AVAILABLE",
-      "measured_sha256": "b43a8ffd3479993100df717417b652238bd5d1562c2763bcfcf63ffc99149050",
+      "measured_sha256": "ef082f8c0c15e3f3e99c5f393342aea332083e2e31aa187ae1560fefc01acc72",
+      "startup_measured_sha256": "b43a8ffd3479993100df717417b652238bd5d1562c2763bcfcf63ffc99149050",
       "role": "workspace execution authority",
-      "provenance": "repository agent instruction file consumed for AD-00 execution constraints",
-      "hash_scope": "execution input before final roadmap advancement",
+      "provenance": "repository agent instruction file consumed for AD-00 execution constraints; current bytes re-observed during authorized AD-02 execution on 2026-10-12, with AD-00 hash preserved separately",
+      "hash_scope": "current bytes observed at AD-02 execution intake",
       "observations": [
-        "Execution must remain bounded, verified, and retrieval-first."
+        "Execution must remain bounded, verified, and retrieval-first.",
+        "AD-02 baseline reproduced the stale AGENTS.md hash failure (97 tests, exit 1); current hash was measured locally, not treated as live provider evidence."
       ],
       "proposed_requirements": [],
       "live_verified": false
@@ -107,20 +109,26 @@
       "id": "ROADMAP",
       "path": "ROADMAP.yaml",
       "availability": "AVAILABLE",
-      "measured_sha256": "1519044fe54185b2ad259e06746c76fda3dcc971773eec5bd27d925a1c037ff6",
+      "measured_sha256": "3ac33a904f84ef19b73b8eb3339c3692cee0e37ecba442cffa00ef74bd23695c",
       "role": "milestone status authority",
-      "provenance": "repository roadmap after independent AD-00 verification and advancement; startup identity preserved separately",
-      "hash_scope": "current bytes after AD-00 completion gate",
+      "provenance": "repository roadmap after independent AD-03 verification and advancement; startup, AD-01, AD-02 and AD-03 verification identities preserved separately",
+      "hash_scope": "current bytes after AD-03 completion gate",
       "observations": [
         "AD-00 was ready and later milestones were blocked at implementation start.",
         "AD-00 is complete, AD-01 ready, and all later milestones blocked after independent verification.",
-        "AD-01 is complete, AD-02 is ready, and later milestones remain blocked after independent AD-01 verification."
+        "AD-01 is complete, AD-02 is ready, and later milestones remain blocked after independent AD-01 verification.",
+        "AD-02 is complete, AD-03 is ready, and AD-04 through AD-23 remain blocked after independent AD-02 verification.",
+        "AD-03 is verifying; AD-04 through AD-23 remain blocked pending independent AD-03 verification.",
+        "AD-03 is complete, AD-04 is ready, and AD-05 through AD-23 remain blocked after independent AD-03 verification and post-cleanup regression."
       ],
       "proposed_requirements": [
         "Advance roadmap only after independent verification exists."
       ],
       "live_verified": false,
-      "startup_measured_sha256": "39d53ce9d02a68d8e7fec56367c4a8e159638f0932e07b2e6b0a07f1ac878ac6"
+      "startup_measured_sha256": "39d53ce9d02a68d8e7fec56367c4a8e159638f0932e07b2e6b0a07f1ac878ac6",
+      "ad01_measured_sha256": "1519044fe54185b2ad259e06746c76fda3dcc971773eec5bd27d925a1c037ff6",
+      "ad02_measured_sha256": "5a413a021df73a74b18873721bd098a8918a98fa2d1115625b04127e2edbfc8c",
+      "ad03_verifying_measured_sha256": "1b1c81d6f11d7139233df3a1885a54f0e19ea256843ba92085bea29facbbc1e1"
     }
   ]
 }
