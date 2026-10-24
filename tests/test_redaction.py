@@ -1,11 +1,18 @@
 from __future__ import annotations
 
 import unittest
+from types import MappingProxyType
 
 from autodev.redaction import SECRET_VALUE, sanitize, sanitized_json
 
 
 class RedactionTests(unittest.TestCase):
+    def test_immutable_contract_shapes_are_redacted(self) -> None:
+        canary = "IMMUTABLE-CANARY"
+        payload = MappingProxyType({"items": (MappingProxyType({"message": canary}),)})
+        self.assertNotIn(canary, sanitized_json(payload, (canary,)))
+        self.assertEqual(sanitize(payload, (canary,)), {"items": [{"message": SECRET_VALUE}]})
+
     def test_authorization_values_redacted_without_explicit_canaries(self) -> None:
         for value in ("raw-value", "Basic encoded-value", "Bearer arbitrary-value"):
             with self.subTest(scheme=value.split()[0]):
