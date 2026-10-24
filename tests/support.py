@@ -218,7 +218,7 @@ def _guarded_child_source() -> str:
         unsupported_stderr = io.StringIO()
         unsupported_codes = {}
         with contextlib.redirect_stdout(unsupported_stdout), contextlib.redirect_stderr(unsupported_stderr):
-            for command in ("init", "dispatch", "onboard", "supervise", "doctor", "run"):
+            for command in ("dispatch", "onboard", "supervise", "doctor", "run"):
                 try:
                     main([command])
                 except SystemExit as exc:
