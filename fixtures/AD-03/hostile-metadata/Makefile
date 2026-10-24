@@ -1,0 +1,2 @@
+all:
+	touch AUTODEV_MUST_NOT_EXECUTE
