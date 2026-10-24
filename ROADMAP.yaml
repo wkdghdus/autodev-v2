@@ -33,21 +33,21 @@ milestones:
     title: "Safe storage, command execution, locks, and journals"
     path: milestones/AD-02.md
     depends_on: [AD-01]
-    status: ready
+    status: complete
 
   - id: AD-03
     sequence: 3
     title: "Friendly init and conservative artifact discovery"
     path: milestones/AD-03.md
     depends_on: [AD-01, AD-02]
-    status: blocked
+    status: complete
 
   - id: AD-04
     sequence: 4
     title: "Execution-index compiler and approval binding"
     path: milestones/AD-04.md
     depends_on: [AD-03]
-    status: blocked
+    status: ready
 
   - id: AD-05
     sequence: 5
