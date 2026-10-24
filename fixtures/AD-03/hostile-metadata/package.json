@@ -1,0 +1,1 @@
+{"name":"passive-discovery-canary","scripts":{"preinstall":"touch AUTODEV_MUST_NOT_EXECUTE","test":"touch AUTODEV_MUST_NOT_EXECUTE"}}
