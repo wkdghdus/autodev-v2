@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import re
+from collections.abc import Mapping
 from typing import Any
 
 
@@ -40,7 +41,7 @@ def redact_text(text: str, extra_canaries: list[str] | tuple[str, ...] = ()) -> 
 
 
 def sanitize(value: Any, extra_canaries: list[str] | tuple[str, ...] = ()) -> Any:
-    if isinstance(value, dict):
+    if isinstance(value, Mapping):
         sanitized: dict[str, Any] = {}
         for key, item in value.items():
             clean_key = redact_text(str(key), extra_canaries)
@@ -49,7 +50,7 @@ def sanitize(value: Any, extra_canaries: list[str] | tuple[str, ...] = ()) -> An
             else:
                 sanitized[clean_key] = sanitize(item, extra_canaries)
         return sanitized
-    if isinstance(value, list):
+    if isinstance(value, (list, tuple)):
         return [sanitize(item, extra_canaries) for item in value]
     if isinstance(value, str):
         return redact_text(value, extra_canaries)
